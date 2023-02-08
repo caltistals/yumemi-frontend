@@ -1,0 +1,19 @@
+.checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 1px;
+}
+
+.checkbox {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.checkbox:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  margin-left: 5px;
+}
