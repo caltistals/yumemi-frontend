@@ -4,7 +4,19 @@
 
 ### 動作環境
 
-- Node v16.10.0
+- Node.js v16.10.0
+
+### 環境変数設定
+
+```
+cp .env.example .env
+```
+
+[RESASAPI のサイト](https://opendata.resas-portal.go.jp/)から利用登録を行い、取得した API キーを`.env`の`VITE_RESAS_API_KEY`の値に設定してください。
+
+```
+VITE_RESAS_API_KEY=XXXXXXXXX
+```
 
 ### 開発サーバー起動
 
