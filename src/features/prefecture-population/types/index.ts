@@ -7,6 +7,8 @@ export type PrefectureCheckbox = Prefecture & {
   isChecked: boolean;
 };
 
+export type PopulationData = { year: number; value: number };
+
 export type PrefecturePopulation = Prefecture & {
-  populations: { year: number; value: number }[];
+  populations: PopulationData[];
 };
