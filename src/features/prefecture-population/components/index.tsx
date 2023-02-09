@@ -3,7 +3,7 @@ import { usePrefectureCheckboxes } from "../hooks/usePrefectureCheckboxes";
 import PrefectureCheckboxes from "./prefecture-checkboxes/PrefectureCheckboxes";
 
 export const PrefecturePopulationPage = () => {
-  const { isLoading, prefectureCheckboxes, toggle } = usePrefectureCheckboxes();
+  const { prefectureCheckboxes, toggle } = usePrefectureCheckboxes();
 
   return (
     <>
