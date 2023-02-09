@@ -2,6 +2,7 @@
 
 - [ゆめみ様向け各種情報](docs/for-yumemi.md)
 - [ディレクトリ構成](docs/directory-structure.md)
+- [CI/CD について](docs/about-ci-cd.md)
 
 ## 環境構築
 
