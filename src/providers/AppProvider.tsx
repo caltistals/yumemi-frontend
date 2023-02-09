@@ -7,5 +7,7 @@ type Props = {
 };
 
 export const AppProvider = ({ children }: Props) => {
-  <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+  return (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  );
 };
