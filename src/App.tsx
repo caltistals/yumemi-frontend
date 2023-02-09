@@ -1,4 +1,3 @@
-import "./App.css";
 import { AppProvider } from "./providers/AppProvider";
 import { PrefecturePopulationPage } from "./features/prefecture-population/components";
 
