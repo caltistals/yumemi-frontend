@@ -52,7 +52,7 @@ export const Default = {
           }
           return {
             ...prefectureCheckbox,
-            isSelected: !prefectureCheckbox.isChecked,
+            isChecked: !prefectureCheckbox.isChecked,
           };
         })
       );
