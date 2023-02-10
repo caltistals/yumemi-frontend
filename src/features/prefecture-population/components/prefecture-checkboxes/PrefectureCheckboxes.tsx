@@ -8,24 +8,27 @@ type Props = {
 
 const PrefectureCheckboxes = ({ prefectureCheckboxes, toggle }: Props) => {
   return (
-    <div className={PrefectureCheckboxess.checkboxes}>
-      {prefectureCheckboxes &&
-        prefectureCheckboxes.map((prefectureCheckbox) => (
-          <label
-            key={prefectureCheckbox.prefCode}
-            className={PrefectureCheckboxess.checkbox}
-          >
-            <input
-              type="checkbox"
-              onChange={() => toggle(prefectureCheckbox.prefCode)}
-              checked={prefectureCheckbox.isChecked}
-            />
-            <span className={PrefectureCheckboxess.checkboxLabel}>
-              {prefectureCheckbox.prefName}
-            </span>
-          </label>
-        ))}
-    </div>
+    <section>
+      <h2 className={PrefectureCheckboxess.title}>都道府県を選択</h2>
+      <div className={PrefectureCheckboxess.checkboxes}>
+        {prefectureCheckboxes &&
+          prefectureCheckboxes.map((prefectureCheckbox) => (
+            <label
+              key={prefectureCheckbox.prefCode}
+              className={PrefectureCheckboxess.checkbox}
+            >
+              <input
+                type="checkbox"
+                onChange={() => toggle(prefectureCheckbox.prefCode)}
+                checked={prefectureCheckbox.isChecked}
+              />
+              <span className={PrefectureCheckboxess.checkboxLabel}>
+                {prefectureCheckbox.prefName}
+              </span>
+            </label>
+          ))}
+      </div>
+    </section>
   );
 };
 
