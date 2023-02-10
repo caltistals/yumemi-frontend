@@ -1,47 +1,21 @@
-import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import { useHighCharts } from "../../hooks/useHighCharts";
 import { PrefecturePopulation } from "../../types";
+import PopulationGraphs from "./PopulationGraph.module.css";
 
 type Props = {
   populationData: PrefecturePopulation[];
 };
 
 const PopulationGraph = ({ populationData }: Props) => {
-  const series: Highcharts.SeriesOptionsType[] = [];
-  const categories = populationData
-    .at(0)
-    ?.populations.map((d) => String(d.year));
-  populationData.map((pData) => {
-    const data = pData.populations.map((d) => d.value);
-    series.push({
-      type: "line",
-      name: pData.prefName,
-      data: data,
-    });
-  });
+  const { Highcharts, options } = useHighCharts(populationData);
 
-  const options: Highcharts.Options = {
-    title: {
-      text: "",
-    },
-    xAxis: {
-      title: {
-        text: "年度",
-      },
-      categories: categories,
-    },
-    yAxis: {
-      title: {
-        text: "総人口数",
-      },
-    },
-    series:
-      series.length === 0
-        ? [{ type: "line", name: "都道府県名", data: [] }]
-        : series,
-  };
-
-  return <HighchartsReact highcharts={Highcharts} options={options} />;
+  return (
+    <section>
+      <h2 className={PopulationGraphs.title}>総人口推移グラフ</h2>
+      <HighchartsReact highcharts={Highcharts} options={options} />
+    </section>
+  );
 };
 
 export default PopulationGraph;
